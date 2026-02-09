@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 명령어
 
 ```bash
-npm run dev          # 개발 서버 시작 (Turbopack, localhost:3000)
+npm run dev          # 개발 서버 시작 (Turbopack, localhost:3010)
 npm run build        # 프로덕션 빌드
 npm run start        # 프로덕션 서버 시작
 npm run lint         # ESLint 실행
@@ -45,3 +45,15 @@ src/
 - 컴포넌트는 named export 사용 (`export function Button`), default export 사용하지 않음
 - API 라우트는 `next/server`의 `NextResponse.json()`으로 응답 반환
 - 사용자 대면 문자열과 주석에 한국어 사용 가능
+
+### API 엔드포인트
+
+| 메서드 | 경로 | 설명 |
+|--------|------|------|
+| `GET` | `/api/logs` | 로그 목록 조회 |
+| `GET` | `/api/logs/:id` | 로그 상세 조회 |
+| `GET` | `/api/alerts` | 알림 규칙 목록 |
+| `POST` | `/api/alerts` | 알림 규칙 생성 |
+| `GET` | `/api/stats` | 대시보드 통계 데이터 |
+| `POST` | `/api/auth/login` | 로그인 |
+| `POST` | `/api/auth/register` | 회원가입 |
